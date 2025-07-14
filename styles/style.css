@@ -18,15 +18,9 @@ body {
 }
 
 .logo {
-  width: 180px;
+  width: 260px;
   height: auto;
   z-index: 2;
-}
-
-.slogan {
-  font-size: 14px;
-  margin-top: 8px;
-  opacity: 0.8;
 }
 
 .text-blocks {
@@ -73,10 +67,9 @@ body {
 
 .bottom-center {
   bottom: 10vh;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 5vw;
   font-size: 22px;
-  text-align: center;
+  text-align: right;
 }
 
 @media (max-width: 768px) {
@@ -84,6 +77,6 @@ body {
     font-size: 16px !important;
   }
   .logo {
-    width: 140px;
+    width: 180px;
   }
 }
