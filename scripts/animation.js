@@ -16,7 +16,7 @@ function cycleText() {
     current.style.transform = 'scale(1)';
     index = (index + 1) % texts.length;
     setTimeout(cycleText, 2000);
-  }, 4000); // time visible
+  }, 4000);
 }
 
 window.onload = () => {
