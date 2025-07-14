@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1A1A1A;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+
+.logo {
+  width: 180px;
+  height: auto;
+  z-index: 2;
+}
+
+.slogan {
+  font-size: 14px;
+  margin-top: 8px;
+  opacity: 0.8;
+}
+
+.text-blocks {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.anim-text {
+  position: absolute;
+  opacity: 0.2;
+  font-size: 20px;
+  transition: all 2s ease;
+  transform: scale(1);
+}
+
+.top-left {
+  top: 15vh;
+  left: 5vw;
+}
+
+.mid-left {
+  top: 35vh;
+  left: 5vw;
+}
+
+.bottom-left {
+  bottom: 10vh;
+  left: 5vw;
+  font-size: 18px;
+}
+
+.top-right {
+  top: 15vh;
+  right: 5vw;
+  max-width: 30vw;
+  font-size: 18px;
+}
+
+.mid-right {
+  top: 35vh;
+  right: 5vw;
+}
+
+.bottom-center {
+  bottom: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 22px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .anim-text {
+    font-size: 16px !important;
+  }
+  .logo {
+    width: 140px;
+  }
+}
