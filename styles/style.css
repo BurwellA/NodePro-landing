@@ -17,10 +17,45 @@ body {
   position: relative;
 }
 
-.logo {
+.logo-wrapper {
+  position: relative;
   width: 260px;
-  height: auto;
+  height: 260px;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
   z-index: 2;
+}
+
+.logo-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    #00c9ff,
+    #92fe9d,
+    #fcb045,
+    #ee7752,
+    #e73c7e,
+    #23a6d5,
+    #00c9ff
+  );
+  animation: rotate 6s linear infinite;
+  filter: blur(40px);
+  z-index: 1;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .text-blocks {
@@ -76,7 +111,8 @@ body {
   .anim-text {
     font-size: 16px !important;
   }
-  .logo {
+  .logo-wrapper {
     width: 180px;
+    height: 180px;
   }
 }
