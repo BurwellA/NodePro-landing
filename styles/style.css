@@ -21,41 +21,37 @@ body {
   position: relative;
   width: 260px;
   height: 260px;
+  overflow: hidden;
+  border-radius: 50%;
 }
 
 .logo {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  display: block;
   position: relative;
   z-index: 2;
 }
 
-.logo-glow {
+.light-overlay {
+  content: "";
   position: absolute;
   top: 0;
-  left: 0;
+  right: -100%;
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: conic-gradient(
-    from 0deg,
-    #00c9ff,
-    #92fe9d,
-    #fcb045,
-    #ee7752,
-    #e73c7e,
-    #23a6d5,
-    #00c9ff
-  );
-  animation: rotate 6s linear infinite;
-  filter: blur(40px);
+  background: linear-gradient(-90deg, rgba(255, 170, 100, 0) 0%, rgba(255, 200, 100, 0.4) 50%, rgba(255, 150, 0, 0.7) 100%);
+  animation: sweep-light 8s infinite ease-in-out;
+  pointer-events: none;
   z-index: 1;
 }
 
-@keyframes rotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+@keyframes sweep-light {
+  0% { right: -100%; }
+  50% { right: 0%; }
+  100% { right: 100%; }
 }
 
 .text-blocks {
